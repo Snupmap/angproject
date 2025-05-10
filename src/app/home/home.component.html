@@ -1,0 +1,15 @@
+
+
+<div class="carsDiv">
+
+    <div *ngFor="let el of cars" class="cars">
+        <img [src]="el.imageUrl1" alt="">
+        <p>{{el.year}}</p>
+        <h1>{{el.brand}} {{el.model}}</h1>
+        <p>{{el.city}}</p>
+        <p>{{el.capacity}}</p>
+        <p>{{el.price}}</p>
+        <p>{{el.transmission}}</p>
+    </div>
+    
+</div>
