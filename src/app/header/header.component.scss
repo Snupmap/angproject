@@ -1,0 +1,95 @@
+.logo{
+    width: 30%;
+    height: 100%;
+    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    align-items: center;
+}
+.other{
+    width: 70%;
+    height: 100%;
+    background-color: black;
+}
+.headerItems{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.buttonsDiv{
+    width: 80px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    gap: 10px;
+}
+.buttonsDiv button{
+    background-color: #014555;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 3px;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+}
+.buttonsDiv button:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.4);
+    transition: 0.1s;
+}
+.logoDivv{
+    width: auto;
+    height: auto;
+    position: absolute;
+}
+.logoDivv h1, p{
+    color: white;
+    margin-left: 30px;
+}
+.logoDivv p{
+    margin-left: 60px;
+    margin-top: -10px;
+    position: relative;
+}
+.routePage{
+    width: auto;
+    height: auto;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 8%;
+    padding-left: 8%;
+    
+}
+.routePage ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 10px;
+    justify-content: center;
+    font-size: 18px;
+}
+.routePage a{
+    color: white;
+}
+.styleRoute{
+    border-top: 1px solid white;   
+    text-decoration: none;
+}
+.styleRoute2{
+    border-bottom: 1px solid white;  
+    padding-bottom: 2px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}

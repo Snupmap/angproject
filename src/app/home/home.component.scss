@@ -1,28 +1,68 @@
 .carsDiv{
-    width: 100%;
+    width: 85%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
     row-gap: 20px;
+    padding-top: 15px;
+    background-color: #010A13;
 }
-.cars{
-    width: 300px;
+
+
+.filterDiv{
+    width: 15%;
     height: auto;
-    border: 1px solid black;
-    border-radius: 10px;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-bottom: 15px;
+    justify-content: center;
+    background-color: #010A13;
 }
-.cars img{
+
+
+.carAndFilter{
     width: 100%;
     height: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
 }
-.cars p, h1{
-    margin-left: 4px
+.filterDiv form{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    margin-top: 30px;
+    font-family: 'Orbitron', sans-serif;
+}
+.filterDiv input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+.filterDiv label{
+    color: white;
+    margin-top: 4px;
+    font-size: 13px;
+}
+.buttonsDivvv{
+    width: 100%;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.buttonsDivvv button{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
 }

@@ -1,15 +1,34 @@
 
+<section class="carAndFilter">
+
+    <div class="filterDiv">
+        <form action="">
+
+        <label for="city">city</label>
+        <input [(ngModel)]="city" name="city" placeholder="city" type="text">
+
+        <label for="capacity">capacity</label>
+        <input [(ngModel)]="capacity" name="capacity" placeholder="capacity" type="number">
+
+        <label for="startYear">start year</label>
+        <input [(ngModel)]="startYear" name="startYear" placeholder="start year" type="number">
+
+        <label for="endYear">end year</label>
+        <input [(ngModel)]="endYear" name="endYear" placeholder="end year" type="number">
+
+        <div class="buttonsDivvv">
+        <button type="button" (click)="filter()">Filter</button>
+        </div>
+
+
+        </form>
+    </div>
+
 
 <div class="carsDiv">
 
-    <div *ngFor="let el of cars" class="cars">
-        <img [src]="el.imageUrl1" alt="">
-        <p>{{el.year}}</p>
-        <h1>{{el.brand}} {{el.model}}</h1>
-        <p>{{el.city}}</p>
-        <p>{{el.capacity}}</p>
-        <p>{{el.price}}</p>
-        <p>{{el.transmission}}</p>
-    </div>
-    
+    <app-home-cards *ngFor="let el of cars" [singleCar]="el" ></app-home-cards>
+
 </div>
+
+</section>
