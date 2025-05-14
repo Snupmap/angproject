@@ -20,9 +20,9 @@ export class HomeComponent {
 
 
   city : string ='' 
-  capacity : number | null = null
-  startYear : number | null = null
-  endYear : number | null = null
+  capacity : number | string = ''
+  startYear : number | string = ''
+  endYear : number | string = ''
 
 
 
@@ -36,14 +36,13 @@ export class HomeComponent {
   }
 
   filter(){
-    if(this.city != '' && this.capacity != null && this.startYear != null && this.endYear != null){
     this.cars = []
     this.filt.getFilter(this.capacity, this.startYear, this.endYear, this.city).subscribe((el : any) => {
       this.cars = (Array.isArray(el) ? el : el?.data || [])
         .filter((car: any) => car.imageUrl1 != null && car.imageUrl2 != null && car.imageUrl3 != null);
         console.log(el)
     }) 
-  }
+
   }
 
 

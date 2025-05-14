@@ -34,12 +34,12 @@
     outline: none;
     font-family: 'Orbitron', sans-serif;
     font-size: 15px;
+    transition: 0.1s;
 }
 .buttonsDiv button:hover{
     background-color: black;
     color: white;
     transform: scale(1.4);
-    transition: 0.1s;
 }
 .logoDivv{
     width: auto;
