@@ -2,7 +2,7 @@
 
 
 
-export class RegisterData {
+export class loginData {
     phoneNumber!: string;
     password!: string;
     email!: string;

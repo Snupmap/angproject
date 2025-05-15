@@ -17,7 +17,7 @@ export class HomeComponent {
 
   cars : Car[] = []
 
-
+  showNoDataFound = false
 
   city : string ='' 
   capacity : number | string = ''
@@ -29,23 +29,33 @@ export class HomeComponent {
 
   ngOnInit(){
     this.api.getCarApi().subscribe((data: any) => {
-      this.cars = data.filter((car : any) => car.imageUrl1 != null && car.imageUrl2 != null && car.imageUrl3 != null && car.year < 2025 && car.year > 1950)
+      this.cars = data.filter((car : any) => car.imageUrl1 != null && car.imageUrl2 != null && car.imageUrl3 != null && car.year < 2025 && car.year > 1950 && car.model !== 'Utopia')
       console.log(data)
     }
   )
   }
 
   filter(){
-    this.cars = []
-    this.filt.getFilter(this.capacity, this.startYear, this.endYear, this.city).subscribe((el : any) => {
-      this.cars = (Array.isArray(el) ? el : el?.data || [])
-        .filter((car: any) => car.imageUrl1 != null && car.imageUrl2 != null && car.imageUrl3 != null);
-        console.log(el)
-    }) 
+    this.filt.getFilter(this.capacity, this.startYear, this.endYear, this.city)
+    .subscribe({
+      
+      next :((resp:any) => {
+        this.cars = resp.data
+        console.log(resp.data)
+        console.log(this.cars)
+        this.showNoDataFound = false
+      }),
+
+      error : (er => {
+        console.log(er.status)
+        this.showNoDataFound = true
+      })
+    })
 
   }
 
 
+  
 
 
 }

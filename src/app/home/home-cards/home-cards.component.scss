@@ -1,14 +1,14 @@
 div{
     width: 300px;
     height: auto;
-    border: 1px solid black;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-bottom: 15px;
+    padding-bottom: 35px;
     background-color: #00333F;
     color: white;
+    position: relative;
 }
 div img{
     width: 100%;
@@ -18,4 +18,145 @@ div img{
 }
 div p, h1{
     margin-left: 4px
+}
+.basketDiv{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.479);
+    position: absolute;
+    cursor: pointer;
+    bottom: 10px;
+    right: 10px;
+    transition: 0.3s;
+}
+.basketDiv i{
+    margin-top: 33px;
+    margin-right: 1px;
+    transform: rotate(-20deg);
+    color: rgba(255, 255, 255, 0.486);
+    animation: 0.3s;
+}
+.basketDiv:hover{
+    
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.26);
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.basketDiv:hover i{
+    color: white;
+    transform: rotate(-25deg);
+}
+.amountDiv{
+    padding-top: 10px;
+    width: 300px;
+    height: 60px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: row;
+    padding-bottom: 0;
+    border-radius: 0;
+    gap: 0;
+}
+.pickText{
+    width: 40%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    border-radius: 4px;
+    border: none;
+}
+.pickText p{
+    margin-top: 25%;
+    margin-left: 6px;
+}
+.amountText{
+    width: 60%;
+    height: 80px;
+    border: none;
+}
+.amountDiv input{
+    width: 40%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 28px;
+    padding-left: 5px;
+    background-color: transparent;
+    color: white;
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+}
+input[type=number] {
+  -moz-appearance: textfield;        
+  appearance: textfield;            
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculateDiv{
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-top: 0px;
+    padding-bottom: 0;
+}
+.calculateDiv P{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.toPurchaseDiv{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: row;
+    padding-bottom: 0;
+    margin-top: 0;
+}
+.toPurchaseDiv i{
+    margin-bottom: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.calculateDiv h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    margin-left: 5px;
+}
+div h1{
+    font-family: 'Roboto', sans-serif;
+    flex-wrap: wrap;
+}
+.goBackDiv{
+    width: 100%;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-top: 150px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.goBackDiv i{
+    margin-left: 8px;
+    margin-top: 8px;
+    font-size: 1.4rem;
+    cursor: pointer;
 }

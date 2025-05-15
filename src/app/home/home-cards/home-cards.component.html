@@ -1,5 +1,5 @@
 
-<div>
+<div style="border: 1px solid black;" *ngIf="!pickAmount">
         <img [src]="singleCar?.imageUrl1" alt="">
         <p>{{singleCar?.year}}</p>
         <h1>{{singleCar?.brand}} {{singleCar?.model}}</h1>
@@ -8,4 +8,25 @@
         <p>{{singleCar?.price}}</p>
         <p>{{singleCar?.transmission}}</p>
         
+
+        
+        <ng-template [ngIf]="token">
+        <div (click)="toAmount()" class="basketDiv">
+        <i class="fa-solid fa-basket-shopping"></i>
+        </div>
+        </ng-template>
+</div>
+<div *ngIf="pickAmount" class="goBackDiv"><i (click)="goBackFunc()" class="fa-solid fa-xmark"></i></div>
+<div *ngIf="pickAmount" class="amountDiv">
+        <div class="pickText"><p style="font-family: 'Roboto', sans-serif;font-size: 1.5rem;font-weight: 600;">Amount :</p></div>
+        <div  class="amountText"><input placeholder="0" [(ngModel)]="amount" (ngModelChange)="toAmount()" type="number"></div>
+</div>
+<div *ngIf="pickAmount" class="calculateDiv">
+        <h2>{{singleCar?.brand}}  {{singleCar?.model}} {{singleCar?.year}}</h2>
+        <p>Amount : {{amount}}</p>
+        <p>Total : {{calculated}}</p>
+
+        <div class="toPurchaseDiv">
+                <i (click)="toPurchasee()" class="fa-solid fa-credit-card"></i>
+        </div>
 </div>

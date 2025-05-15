@@ -17,14 +17,64 @@
     <div class="routePage">
         <ul>
             <li><a class="styleRoute" routerLink="home">Home</a></li>
-            <li><a class="styleRoute2" href="">Favourites</a></li>
+            <li><a class="styleRoute2" *ngIf="token" routerLink="/mycars">My cars</a></li>
         </ul>
     </div>
 
-    <div class="buttonsDiv">
-        <button routerLink="register">Register</button>
-        <button>Log in</button>
+    <div *ngIf="!token" class="buttonsDiv">
+        <button routerLink="/register">Register</button>
+        <button routerLink="/login">Log in</button>
     </div>
+
+    <div *ngIf="token" class="showNameLastName">
+        <p>{{firstName}} {{lastName}} <i (click)="logOutFunction()" class="fa-solid fa-right-from-bracket logoutIcon"></i></p>
+    </div>
+
+
+
+
+
+
+
+
+   <div class="burgerMenuu" *ngIf="token">
+
+  <input style="display: none;" type="checkbox" id="burgerMenuToggle" class="burgerCheckbox" />
+
+  <label for="burgerMenuToggle" class="burgerButton">
+    <div class="burgerDiv"></div>
+    <div class="burgerDiv"></div>
+    <div class="burgerDiv"></div>
+  </label>
+
+
+  <div class="menu">
+
+    <label for="burgerMenuToggle" class="closeButton">
+      <div class="closeDiv rotate1"></div>
+      <div class="closeDiv rotate2"></div>
+    </label>
+
+    <div class="userDiv">
+        <div class="infooDiv"></div>
+        <div class="userNames">
+            <p>{{firstName}} {{lastName}} <i (click)="logOutFunction()" class="fa-solid fa-right-from-bracket logoutIcon"></i></p> 
+        </div>
+    </div>
+
+
+
+    <ul>
+        <li><a class="mobileRoute" routerLink="/home">Home</a></li>
+        <li><a class="mobileRoute2" routerLink="/mycars">My cars</a></li>
+    </ul>
+
+
+  </div>
+
+</div>
+
+
 
     </nav>
 

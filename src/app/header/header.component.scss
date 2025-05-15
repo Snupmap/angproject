@@ -63,15 +63,14 @@
     flex-wrap: wrap;
     margin-right: 8%;
     padding-left: 8%;
-    
 }
 .routePage ul{
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    gap: 10px;
+    gap: 30px;
     justify-content: center;
-    font-size: 18px;
+    font-size: 21px;
 }
 .routePage a{
     color: white;
@@ -79,12 +78,22 @@
 .styleRoute{
     border-top: 1px solid white;   
     text-decoration: none;
+    transition: 0.1s;
+}
+.styleRoute:hover{
+    padding-top: 4px;
+    border-top: 2px solid white;
 }
 .styleRoute2{
     border-bottom: 1px solid white;  
-    padding-bottom: 2px;
+    padding-bottom: 4px;
     text-decoration: none;
     margin-left: 10px;
+    transition: 0.1s;
+}
+.styleRoute2:hover{
+    padding-bottom: 7px;
+    border-bottom: 2px solid white;
 }
 nav{
     width: 100%;
@@ -92,4 +101,176 @@ nav{
     display: flex;
     align-items: center;
     justify-content: end;
+}
+.userInfoDiv{
+    width: 90px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-right: 30px;
+    gap: 5px;
+}
+.userInfo {
+    color: #ffffff;
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+.burgerMenuu{
+    display: none;
+}
+.burgerButton{
+    width: 45px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 15px;
+}
+
+.burgerDiv{
+    background-color: white;
+    width: 80%;
+    height: 2px;
+    border-radius: 5px;
+}
+.menu{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #010A13;
+    top: 0;
+    z-index: 900;
+    right: -100%;
+    transition: right 0.3s ease-in-out; 
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+
+.closeButton{
+    width: 45px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 15px;
+    top: 25px;
+    right: 0;
+    position: absolute;
+}
+.closeButton .closeDiv{
+    background-color: white;
+    width: 80%;
+    height: 2px;
+    border-radius: 5px;
+    position: absolute;
+    transform-origin: center;
+}
+.rotate1 {
+    transform: rotate(45deg);
+}
+
+.rotate2 {
+    transform: rotate(-45deg);
+}
+.burgerCheckbox:checked ~ .menu {
+  right: 0;
+}
+
+
+.menu ul{
+    width: 80%;
+    height: auto;
+    list-style-type: none;
+    text-decoration: none;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.menu li{
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+}
+.menu a{
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+
+.userDiv{
+    width: 80%;
+    height: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.infooDiv{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(68, 68, 68);
+    margin-top: 20px;
+    border-radius: 50%;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.userNames{
+    margin-top: 7px;
+    margin-right: 10px;
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+.logoutIcon{
+    padding: 3px 3px;
+    font-size: 20px;
+    margin-left: 3px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.logoutIcon:hover{
+    transform: scale(1.2);
+    margin-left: 5px;
+}
+.showNameLastName{
+    width: auto;
+    height: 100%;
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: 30px;
+}
+
+@media (max-width: 1000px) {
+    .burgerMenuu{
+        display: flex;
+    }
+    .styleRoute, .styleRoute2{
+        display: none;
+    }
+    .showNameLastName{
+        display: none;
+    }
 }

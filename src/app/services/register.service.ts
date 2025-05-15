@@ -9,8 +9,8 @@ export class RegisterService {
 
   constructor(private http : HttpClient) { }
 
-  getRegister(){
-    return this.http.post('https://rentcar.stepprojects.ge/api/Users/register', RegisterData)
+  getRegister(userData : RegisterData){
+    return this.http.post('https://rentcar.stepprojects.ge/api/Users/register', userData)
   }
 
 }

@@ -1,3 +1,7 @@
+
+
+
+
 .carsDiv{
     width: 85%;
     height: auto;
@@ -8,6 +12,8 @@
     row-gap: 20px;
     padding-top: 15px;
     background-color: #010A13;
+    padding-bottom: 25px;
+    min-height: 100vh;
 }
 
 
@@ -26,6 +32,8 @@
     display: flex;
     justify-content: space-between;
 }
+
+
 .filterDiv form{
     width: 90%;
     height: auto;
@@ -65,4 +73,21 @@
     outline: none;
     cursor: pointer;
     font-family: 'Orbitron', sans-serif;
+}
+@media (max-width: 600px) {
+  .carAndFilter{
+    flex-direction: column;
+  }
+  .filterDiv{
+    width: 100% ;
+  }
+  .carsDiv{
+    width: 100%;
+  } 
+  .filterDiv form{
+    width: 80%;
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+
 }
