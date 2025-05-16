@@ -1,7 +1,39 @@
 .myCars{
-    width: 300px;
+    width: 350px;
     height: auto;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 30%;
+    height: 170px;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transition: 0.3s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.logo p{
+    position: absolute;
+    padding-top: 33px;
+    padding-left: 5px;
+}
+.logo:hover{
+    background-color: white;
+    color: black;
+}
+.carInfo{
+    width: 70%;
+    height: 170px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -9,4 +41,6 @@
     background-color: #00333F;
     color: white;
     padding-left: 5px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
 }

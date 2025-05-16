@@ -160,3 +160,20 @@ div h1{
     font-size: 1.4rem;
     cursor: pointer;
 }
+@media (max-width: 800px){
+    .forResponsiveCard{
+        width: 200px;
+    }
+}
+@media (max-width: 415px){
+    .forResponsiveCard{
+        width: 170px;
+    }
+    .forResponsiveCard h1{
+        font-size: 15px;
+    }
+    .basketDiv{
+        width: 60px;
+        height: 60px;
+    }
+}

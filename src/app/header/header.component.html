@@ -4,8 +4,8 @@
 <div class="logo">
 
     <div class="logoDivv">
-    <h1>Rent</h1>
-    <p>Car</p>
+    <h1 style="cursor: pointer;" routerLink="/home">Rent</h1>
+    <p style="cursor: pointer;" routerLink="/home">Car</p>
     </div>
 
 </div>
@@ -27,7 +27,7 @@
     </div>
 
     <div *ngIf="token" class="showNameLastName">
-        <p>{{firstName}} {{lastName}} <i (click)="logOutFunction()" class="fa-solid fa-right-from-bracket logoutIcon"></i></p>
+       <img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg" alt=""> <p> {{firstName}} {{lastName}} </p> <i (click)="logOutFunction()" class="fa-solid fa-right-from-bracket logoutIcon"></i>
     </div>
 
 

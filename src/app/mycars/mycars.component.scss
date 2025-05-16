@@ -9,21 +9,35 @@
     padding-bottom: 15px;
 }
 .infos{
-    width: 80%;
+    width: 95%;
     height: auto;
     align-self: center;
     padding-bottom: 25px;
     padding-top: 15px;
 }
 .carsBox{
-    width: 90%;
+    width: 95%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     align-self: center;
-    justify-content: center;
+    justify-content: start;
     align-items: start;
-    gap: 8px;
-    row-gap: 15px;
+    gap: 28px;
+    row-gap: 20px;
     font-family: 'Roboto', sans-serif;
+}
+.noCarsMessage{
+    color: rgb(255, 255, 255);
+    width: auto;
+    height: 70px;
+    background-color: #222;;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
 }

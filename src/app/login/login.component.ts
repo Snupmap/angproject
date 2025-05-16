@@ -65,5 +65,18 @@ logIn(){
 
 }
 
+onlyNumbers(event: KeyboardEvent) {
+  const char = event.key;
+  
+  const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab', 'Enter'];
+
+  if ((event.ctrlKey || event.metaKey) && ['a', 'c', 'v', 'x'].includes(char.toLowerCase())) return;
+
+
+  if (!/^\d$/.test(char) && !allowedKeys.includes(char)) {
+    event.preventDefault();
+  }
+}
+
 
 }

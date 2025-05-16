@@ -85,9 +85,19 @@
     width: 100%;
   } 
   .filterDiv form{
-    width: 80%;
+    width: 90%;
     margin-top: 10px;
     padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+  }
+  .filterDiv input{
+    width: 90%;
+  }
+  .buttonsDivvv{
+    width: 80%;
+    justify-self: center;
+    grid-column: 1 / -1;
   }
 
 }

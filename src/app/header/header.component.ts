@@ -24,6 +24,7 @@ export class HeaderComponent {
     localStorage.removeItem('token')
     localStorage.removeItem('name')
     localStorage.removeItem('lastName')
+    localStorage.removeItem('phoneNumber')
   }
 
 

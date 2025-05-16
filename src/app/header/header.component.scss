@@ -214,7 +214,7 @@ nav{
 
 
 .userDiv{
-    width: 80%;
+    width: 100%;
     height: auto;
     margin-top: 100px;
     border-radius: 10px;
@@ -262,7 +262,21 @@ nav{
     align-items: center;
     margin-right: 30px;
 }
-
+.showNameLastName img{
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    margin-top: 1px;
+}
+.showNameLastName p{
+    margin-left: 8px;
+}
+.showNameLastName i{
+    font-size: 1.3rem;
+    color: white;
+    margin-top: 5px;
+    margin-left: 10px;
+}
 @media (max-width: 1000px) {
     .burgerMenuu{
         display: flex;

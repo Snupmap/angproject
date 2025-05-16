@@ -18,14 +18,14 @@
         <input [(ngModel)]="email" placeholder="email" name="email" type="email">
 
         <label for="phoneNumber">phone number:</label>
-        <input [(ngModel)]="phoneNumber" placeholder="number" name="phoneNumber" type="tel">
+        <input [(ngModel)]="phoneNumber" placeholder="number" name="phoneNumber" type="tel" pattern="[0-9]*" inputmode="numeric" (keydown)="onlyNumbers($event)">
 
         <label for="password">password</label>
         <input [(ngModel)]="password" placeholder="password" name="password" type="password">
 
 
         <div class="buttonDiv">
-        <button (click)="register()" type="submit">Register</button>
+        <button style="transition: 0.3s;" (click)="register()" [disabled]="!firstName || !lastName || !email || !phoneNumber || !password"  type="submit">Register</button>
         </div>
 
         <p>already have an account? <a style="text-decoration: none; color: rgb(89, 92, 226);" routerLink="/login">click here</a></p>
